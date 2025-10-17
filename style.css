@@ -1,86 +1,211 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+hr {
+  height: 4px;
+  background-color: black;
 }
 
 body {
-    background-color: #ffffa6ad;
+  background-color: #ffffa6ad;
 }
 
 header {
-    background-color: #FFFFD7;
-    position: sticky;
-    z-index: 1000;
-    padding: 20px 0;
-    top: 0;
+  background-color: #ffffd7;
+  position: sticky;
+  z-index: 1000;
+  padding: 20px 0;
+  top: 0;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
 nav ul li {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fef24e;
+  color: #fef24e;
 }
 
 .perkenalan {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-hover {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffff45b6;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
 }
 
 .perkenalan h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .perkenalan h3 {
-    font-size: 2.4rem;
-    font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 .perkenalan p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .about-container {
-    background-color: #ffffa6ad;
+  background-color: #ffffa6ad;
 }
 
 .about-isi {
-    color: rgba(88, 88, 23, 0.358);
-    max-width: 1200px;
-    margin: 0 auto;
+  color: rgba(88, 88, 23, 0.358);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
 .about-isi p {
+  color: black;
+}
+
+.karya-title {
+  text-align: center;
+}
+
+.karya-title h2 {
+  font-size: 2rem;
+}
+
+.karya-title p {
+  font-size: 1rem;
+}
+
+.karya-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 100vh;
+}
+
+.karya-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.karya-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.karya-item {
+  background-color: #ffffa6ad;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 350px;
+}
+
+.karya-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.contact-background {
+    background-color: #ffffa6ad;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-title {
+  font-size: larger;
+}
+
+.contact-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contact-isi img {
+  margin: 30px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.contact-tulisan {
+  margin: 30px;
+}
+
+.contact-tulisan h3 {
+  color: black;
+  font-size: 2rem;
+}
+
+.contact-icon {
+    display: flex;
+    margin-top: 20px;
+}
+
+.contact-icon a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #f9f5f0;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.contact-icon a:hover {
+    background-color: #ffff45b6;
     color: black;
 }
