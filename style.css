@@ -18,6 +18,7 @@ body {
   background-color: #ffffa6ad;
 }
 
+/* =================== HEADER =================== */
 header {
   background-color: #ffffd7;
   position: sticky;
@@ -30,6 +31,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -53,15 +55,17 @@ nav ul li a:hover {
   color: #fef24e;
 }
 
+/* =================== PERKENALAN =================== */
 .perkenalan {
   max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .btn-hover {
@@ -85,6 +89,7 @@ nav ul li a:hover {
   font-size: 1.5rem;
 }
 
+/* =================== ABOUT =================== */
 .about-container {
   background-color: #ffffa6ad;
 }
@@ -100,6 +105,7 @@ nav ul li a:hover {
   color: black;
 }
 
+/* =================== KARYA =================== */
 .karya-title {
   text-align: center;
 }
@@ -116,7 +122,7 @@ nav ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .karya-item img {
@@ -150,62 +156,157 @@ nav ul li a:hover {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-.contact-background {
-    background-color: #ffffa6ad;
+/* =================== CONTACT =================== */
+.contact-section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
+.contact-section .title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.contact-section .subtitle {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-color: black;
+  margin: 20px 0;
+}
+
+/* Kontainer utama */
 .contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
 }
 
-.contact-title {
-  font-size: larger;
-}
-
-.contact-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-}
-
-.contact-isi img {
-  margin: 30px;
-  height: 250px;
+/* Foto profil */
+.profile img {
   width: 250px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 50%;
+  border: 4px solid #000;
 }
 
-.contact-tulisan {
-  margin: 30px;
+/* Kontak info */
+.contact-info {
+  text-align: left;
+  max-width: 400px;
 }
 
-.contact-tulisan h3 {
+.contact-info h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Tombol sosial media */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
   color: black;
-  font-size: 2rem;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.contact-icon {
-    display: flex;
-    margin-top: 20px;
+.social-btn:hover {
+  background-color: black;
+  color: white;
 }
 
-.contact-icon a{
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: #f9f5f0;
-    border-radius: 50%;
-    margin-right: 15px;
-    display: flex;
-    align-items: center;
+/* =================== RESPONSIVE =================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .perkenalan h1 {
+    font-size: 2.5rem;
+  }
+
+  .perkenalan h3 {
+    font-size: 2rem;
+  }
+
+  .perkenalan p {
+    font-size: 1.2rem;
+  }
+
+  .karya-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    flex-wrap: wrap;
     justify-content: center;
-    color: #333;
-    transition: background-color 0.3s;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
 }
 
-.contact-icon a:hover {
-    background-color: #ffff45b6;
-    color: black;
+/* HP */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .perkenalan h1 {
+    font-size: 2rem;
+  }
+
+  .perkenalan h3 {
+    font-size: 1.5rem;
+  }
+
+  .perkenalan p {
+    font-size: 1rem;
+  }
+
+  .karya-items {
+    grid-template-columns: 1fr;
+  }
+
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
 }
